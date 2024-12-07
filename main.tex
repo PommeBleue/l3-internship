@@ -1,0 +1,65 @@
+\documentclass[12pt]{scrartcl}
+\usepackage[pretty]{mystd}
+\title{Classification des surfaces compactes, connexes et orientables par la théorie de Morse}
+\author{Amar Ahmane\\ Sous la direction d'Anne Vaugon}
+\date{ENS Ker Lann, 2023/2024}
+
+\tikzset{
+  state/.style={circle,draw,minimum size=6ex},
+  arrow/.style={-latex, shorten >=1ex, shorten <=1ex}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+{\small
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+% INTRODUCTION %
+%%%%%%%%%%%%%%%%
+
+% TODO : dans cette section, inclure les références bibliograpgiques 
+% lorsqu'il y a mention de livres/articles utilisés.
+% Réécrire la partie du rapport qui dit que je vais prouver des trucs 
+% que je n'ai pas prouvé, et les démontrer. 
+
+\input{sections/introduction.tex}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%
+% PRÉLIMINAIRES %
+%%%%%%%%%%%%%%%%%
+
+\input{sections/prelims.tex}
+
+\newpage
+
+%%%%%%%%%%%%%%%
+% TH DE MORSE %
+%%%%%%%%%%%%%%%
+
+\input{sections/morseth.tex}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%
+% CLASSIFICATION %
+%%%%%%%%%%%%%%%%%%
+
+\input{sections/class.tex}
+
+\newpage
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{biblio}
+
+
+
+\end{document}

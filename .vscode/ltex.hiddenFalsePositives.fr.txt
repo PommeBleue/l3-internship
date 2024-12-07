@@ -1,0 +1,5 @@
+{"rule":"AGREEMENT_POSTPONED_ADJ","sentence":"^\\QOn va commencer par montrer que toute variété compacte se plonge dans un espace affine \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"AGREEMENT_POSTPONED_ADJ","sentence":"^\\QToute variété compacte se plonge dans un espace affine \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"AUX_ETRE_VCONJ","sentence":"^\\QAinsi, tant que \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q est affine de dérivée égale à \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"ELISION","sentence":"^\\QOn définit alors la hessienne de \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q par rapport à \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, notée \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, comme étant la hessienne de l'application \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"J_N","sentence":"^\\QOn définit alors la hessienne de \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q par rapport à \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, notée \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, comme étant la hessienne de l'application \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}

@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=1.2]
+    \coordinate (p1) at (2.05,2.55);
+    \coordinate (p2) at (3,2);
+    \coordinate (p3) at (3.95,2.55);
+    \path[draw, thick] plot [smooth cycle,tension=1] coordinates {(p1) (p2) (p3)};
+    \draw[thick] (2,2.5) arc (180:360:1 and .16);
+    \draw[very thick, arrow] (4, 2.25) -- (5,2.25);
+    \coordinate (p1) at (5.05,2.55);
+    \coordinate (p2) at (6,2);
+    \coordinate (p3) at (6.95,2.55);
+    \path[draw, thick] plot [smooth cycle,tension=1] coordinates {(p1) (p2) (p3)};
+    \draw[thick] (5,2.5) arc (180:360:1 and .16);
+    \draw[thick] (5.7,2.66) -- ++(0.2,-.32);
+    \draw[thick] (6.1,2.66) -- ++(0.2,-.32);
+    \draw[very thick, arrow] (7, 2.25) -- (8,2.25);
+    \draw[thick] (8.05,2.55) -- ++(1.5,0);
+    \draw[thick] (8.05,2) -- ++(1.5,0);
+    \draw[thick] (8.05,2) arc (270:90:.1 and .275);
+    \draw[thick,dashed] (8.05,2) arc (-90:90:.1 and .275);
+    \draw[thick] (9.55,2) arc (270:90:.1 and .275);
+    \draw[thick,dashed] (9.55,2) arc (-90:90:.1 and .275);
+\end{tikzpicture}

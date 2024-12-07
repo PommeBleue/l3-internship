@@ -1,0 +1,51 @@
+\begin{tikzpicture}[scale=.4]
+    % Boule
+    \shade[ball color=gray!90,opacity = 0.2] (0,0) circle (4cm);
+	\draw[thick] (0,0) circle (4cm);
+	\draw[thick] (-4,0) arc (180:360:4 and 0.6);
+	\draw[thick,dashed] (4,0) arc (0:180:4 and 0.6);
+    %% Ouvert Ui
+    \node (p1) at (-2.5, -0.4) {};
+    \node (p2) at (-0.5, 2.0) {};
+    \node (p3) at (0.4, 0.1) {};
+    \path[fill,AccColor1!50,opacity=0.5]plot [smooth cycle,tension=1] coordinates {(p1) (p2) (p3)};
+    \node at (-1.8, 2.0) {$U_i$};
+    % Ouvert Uj
+    \node (q1) at (-0.5,0) {};
+    \node (q2) at (2.0,-1) {};
+    \node (q3) at (2.0, 0.5) {};
+    \node (q4) at (-0.5, 1.0) {};
+    \path[fill,AccColor2!50,opacity=0.5]plot [smooth cycle,tension=1] coordinates {(q1) (q2) (q3)(q4)};
+    \path[thick,draw,black]plot [smooth cycle,tension=1] coordinates {(q1) (q2) (q3)(q4)};
+    \path[thick,draw,black]plot [smooth cycle,tension=1] coordinates {(p1) (p2) (p3)}; 
+	\node at (2,1.1) {$U_j$};
+
+    % Ouvert d'arrivée i
+    \node (p1) at (8, 2) {};
+    \node (p2) at (12.5, 5.0) {};
+    \node (p3) at (12.4, 2.1) {};
+    \path[fill,AccColor1!30]plot [smooth cycle,tension=1] coordinates {(p1) (p2) (p3)};
+    \path[thick,draw,black]plot [smooth cycle,tension=1] coordinates {(p1) (p2) (p3)}; 
+	\node at (10.5,2.8) {$\varphi_i(U_i)$};
+    
+    % Ouvert d'arrivée j
+    \node (q1) at (8.0,-5) {};
+    \node (q2) at (12.5,-5.2) {};
+    \node (q3) at (12.5, -2.3) {};
+    \node (q4) at (8.3, -2.3) {};
+    \path[fill,AccColor2!30]plot [smooth cycle,tension=1] coordinates {(q1) (q2) (q3)(q4)};
+    \path[thick, draw, black]plot [smooth cycle,tension=1] coordinates {(q1) (q2) (q3)(q4)};
+    \node at (10.5,-3.7) {$\varphi_j(U_j)$};
+
+    % Flèche changement de carte
+	\node at (16.2,3) {$\varphi_i (U_i \cap U_j)$};
+	\draw [very thick, arrow] (16.2,-3) to (16.2,2) ;
+	\node at (16.2,-4.2) {$\varphi_j (U_i \cap U_j)$};
+	\node at (15.5,-0.5) [left] {$\varphi_{ij}$};
+
+    % Flèches cartes
+	\draw [very thick,arrow,bend angle=45,bend left]  (-0.2,1.2)  to (8.4,3) ;
+	\node at (5,4.7) {$\varphi_i$};
+	\draw [very thick,arrow,bend angle=45,bend right]  (0.5,0)  to (7.5,-5) ;
+	\node at (5,-4.2) {$\varphi_j$};
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \draw[thick,dashed] (0,0) ellipse (3 and .5);
+    \draw[thick] (-2,0) .. controls (-1,0) .. (-1,2); 
+    \draw[thick] (2,0) .. controls (1,0) .. (1,2);
+    \draw[thick,dashed,AccColor2] (1,2) arc (0:180:1 and .16);
+    \draw[thick,AccColor2] (-1,2) arc (180:360:1 and .16);
+
+    \node at (1,2) [AccColor2, right] {\footnotesize$f=c$};
+
+    \coordinate (p1) at (-1,2);
+    \coordinate (p2) at (0,2.5);
+    \coordinate (p3) at (1,2);
+    \path[draw, thick] plot [smooth,tension=1.4] coordinates {(p1) (p2) (p3)};
+\end{tikzpicture}

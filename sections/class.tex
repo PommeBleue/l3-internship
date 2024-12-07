@@ -1,0 +1,65 @@
+\section{Classification des surfaces}
+
+\begin{defi}
+    Soit $f:S\to \R$ une fonction de Morse sur une surface $S$. 
+    Alors $f$ est "une bonne fonction de Morse" si $f$ est ordonnée et 
+    si elle ne possède qu'un seul point critique d'indice $0$ et un seul 
+    point critique d'indice $1$.
+\end{defi}
+
+\begin{prop}
+    Soit $f:S\to\R$ une bonne fonction de Morse. Alors le nombre de points 
+    critiques d'indice $1$ de $f$ est pair.
+\end{prop}
+
+\begin{proof}
+    En effet, on sait que le passage d'une valeur critique d'indice $0$ rajoute
+    une composante de bord, que le passage d'une valeur critique d'indice $2$ diminue 
+    de un le nombre de composantes de bord. 
+    Puis le passage d'une valeur critique d'indice $1$ rajoute ou diminue de un le nombre 
+    de composantes de bord, puisque, $S$ étant orientable, on ne s'autorise pas la présence 
+    de valeurs critiques d'indice $1$ dont le passage laisse le nombre de composantes de bord 
+    inchangé. 
+    Soit alors $n_0$ le nombres de valeurs critiques dont le passage ajoute une composante de 
+    bord, $n_1$ le nombre qui fait diminuer le nombre de composantes de bord. 
+    Après le passage de tous les points critiques, le nombre de composantes de bord est 
+    $1+n_0-n_1-1=0$, car $S$ est sans bord, donc $n_0=n_1$.
+\end{proof}
+
+\begin{thm}
+    Toute surface admet une bonne fonction de Morse.
+\end{thm}
+
+\begin{thm}[de classification des surfaces]
+    Soit $S$ une surface, alors elle homéomorphe à $T_g$ avec $g\geq 0$.
+\end{thm}
+
+\begin{proof}
+    Soit $f:S\to\R$ une bonne fonction de Morse. D'après une proposition précédente, $f$ admet 
+    $2m$ points critiques associés à $2m$ valeurs critiques d'indice $1$. 
+    Nous nommerons valeur critique d'indice $1$ du premier type toute valeur critique d'indice 
+    dont le passage change le nombre de composantes de bord, et valeur critique d'indice $1$ 
+    du second type celles dont le passage diminue le nombre de composantes de bord. 
+    Quitte à modifier la fonction de Morse, on peut supposer les valeurs critiques d'indice 
+    $1$ viennent par paires premier type second type. 
+
+    Par récurrence, on montre que $S$ est homéomorphe à $T_m$. 
+    Si $m=0$, c'est le théorème de Reeb.
+    Sinon, lors du passage de la première valeur critique d'indice $1$, l'espace obtenu est un 
+    disque auquel on a recollé deux côtés d'un rectangle le long de deux segments du bord, 
+    espace homéomorphe à un cylindre ; lors du passage de la deuxième valeur critique, on 
+    recolle les deux côtés d'un rectangle le long de deux segments, un par composante de 
+    bord (il y en a deux).
+
+    Soit $a$ une valeur critique intermédiaire située entre la deuxième valeur critique 
+    d'indice $1$ et la troisième, alors on voit que $M_a$ est homéomorphe au tore privé 
+    d'un disque, d'où $S=\mathbb T\#M^a$ où $M^a$ est une surface privée d'un disque 
+    sur laquelle on peut définir une bonne fonction de Morse ayant $2m-2$ points critiques 
+    d'indice $1$. Ce raisonnement permet d'enclencher une récurrence, ce qui achève de démontrer 
+    le théorème.
+\end{proof}
+
+\begin{center}
+    \input{figures/tikz/classif.tex}\\
+    \textsc{Figure 5} – \textit{Espace obtenu après la première valeur critique (à gauche) et après la seconde (à droite)}
+\end{center}

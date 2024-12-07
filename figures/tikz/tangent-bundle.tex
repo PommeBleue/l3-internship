@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=0.75pt, y=0.75pt, yscale=-1, scale=.75]
+    height of 300
+  
+    % The manifold
+    \draw[thick] (112.04,66.62) node[above right, font=\scriptsize]{$M$};
+    \draw[thick] (100,108) .. controls (140,78) and (188,143) 
+                    .. (196,182) ;
+    \draw[thick] (196.2,181.8) .. controls (211.8,159.6) and (265.71,101.03) 
+                        .. (318.8,111.8) ;
+    \draw[thick] (318.8,111.8) .. controls (323.67,112.42) and (330.33,115.42) 
+                        .. (335,118) ;
+    \draw[dotted] (219.48,53.8) .. controls (230.71,56.06) and (244.01,58.07) 
+                                .. (259,63.39) ;
+    \draw[thick] (259,63.39) .. controls (288.81,75.27) and (332.14,114.93) 
+                      .. (335,118) ;
+    \draw[thick] (100,108) .. controls (113.56,84.56) and (160.04,48.06) 
+                    .. (219.48,53.8) ;
+  
+    % The tangent space at x
+    \draw[thick] (238.68,46.2) -- (294.01,93.72) 
+                        -- (224.01,122.72) 
+                        -- (168.68,75.2) 
+                        -- cycle ;
+    \fill[AccColor2!40,opacity=.5] (238.68,46.2) -- (294.01,93.72) 
+                        -- (224.01,122.72) 
+                        -- (168.68,75.2) 
+                        -- cycle ;                        
+    \draw (173.51,76.9) node[below right, 
+                             font=\scriptsize, 
+                             rotate=-337.86,
+                             xslant=-0.54]{$T_{x} M$};
+
+    % A point x in the manifold
+    \filldraw (232.9,84.2) circle (1pt)
+    node[below right, font=\scriptsize]{$x$};
+  \end{tikzpicture}
