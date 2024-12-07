@@ -1,0 +1,40 @@
+\begin{thebibliography}{1}
+
+\bibitem{EDFB}
+Florent Berthelin.
+\newblock {\em Équations différentielles}.
+\newblock Cassini, 2017.
+
+\bibitem{TopS}
+André Gramain.
+\newblock {\em Topologie des surfaces}.
+\newblock PUF, 1971.
+
+\bibitem{PMa}
+Patrick Massot.
+\newblock Topologie différentielle.
+\newblock 2016.
+
+\bibitem{MAudMDam}
+Mihai~Damian Michèle~Audin.
+\newblock {\em Théorie de Morse et homologie de Floer}.
+\newblock EDP Sciences, 2012.
+
+\bibitem{JMil}
+John~Willard Milnor.
+\newblock {\em Morse Theory}.
+\newblock Princeton University Press, 1963.
+
+\bibitem{PGCD}
+François Rouvière.
+\newblock {\em Petit guide de calcul différentiel à l'usage de la licence et
+  de l'agrégation}.
+\newblock Enseignement des mathématiques. Cassini, 4e édition, revue et
+  corrigée edition, 2015.
+
+\bibitem{key}
+Johan Rydholm.
+\newblock Classification of compact orientable surfaces using morse theory.
+\newblock {\em Uppsala University}, 2016.
+
+\end{thebibliography}
