@@ -10,11 +10,11 @@
     l'image par $f$ d'un point critique.
 \end{defi}
 
-Si $M$ est une surface, en regardant dans une carte $\varphi$ telle que $\varphi(s,t)=x$, 
+Si $M$ est une surface, en regardant dans une carte $\varphi$ telle que $\varphi^{-1}(s,t)=x$, 
 cela revient à écrire 
 \[
-    \frac{\partial(f\circ\varphi)}{\partial s}(s,t)=
-    \frac{\partial(f\circ\varphi)}{\partial t}(s,t)=0
+    \frac{\partial(f\circ\varphi^{-1})}{\partial s}(s,t)=
+    \frac{\partial(f\circ\varphi^{-1})}{\partial t}(s,t)=0
 \]
 
 \begin{defi}
@@ -176,17 +176,17 @@ Cette notion permettra de démontrer des résultats importants de théorie de Mo
     $2x_1\partial_{x_1}+\dots+2x_i\partial_{x_i}-2x_{i+1}\partial_{x_{i+1}}-\dots-2x_n\partial_{x_n}$.
 \end{defi}
 
-La proposition suivante est démontrée dans [1].
+La proposition suivante est démontrée dans [3].
 \begin{prop}
     Toute fonction de Morse admet un pseudo-gradient adapté.
 \end{prop}
 
 \subsubsection{Existence de fonctions de Morse sur une variété compacte}
-On va commencer par montrer que toute variété compacte se plonge dans un espace affine $R^N$. 
+On va commencer par montrer que toute variété compacte se plonge dans un espace affine $\R^N$. 
 En fait, on n'a pas besoin que la variété soit compacte, mais ça suffit pour ce qu'on veut faire, 
 c'est-à-dire classifier les surfaces compactes, connexes, orientables et sans bord.
 
-Pour ce faire, on admet le théorème suivant (voir [3])
+Pour ce faire, on admet le théorème suivant (voir [4])
 \begin{thm}
     Pour tout recouvrement d'une variété $M$ par des ouverts $U_i$, il existe une famille 
     de fonctions lisses $\rho_i:M\to \R_+$ telles que 
@@ -235,7 +235,7 @@ Pour ce faire, on admet le théorème suivant (voir [3])
     puisque $g$ envoie tout fermé sur un fermé.
 \end{proof}
 
-Ayant le théorème de plongement, on se contente de montrer l'existence de fonctions de Morses 
+Ayant le théorème de plongement, on se contente de montrer l'existence de fonctions de Morse 
 sur des sous-variétés de $\R^n$.
 
 Sur une sous-variété $V$ de $\R^n$, et pour $p\in\R^n$, on définit 
@@ -277,7 +277,7 @@ On pose alors $g:N\to\R^n$ définie par $g(x,v)=x+v$.
 On vérifie qu'un point $p\in\R^n$ est une valeur critique de $g$ si et seulement si 
 la matrice de la hessienne de $f_p$ en un $x$ tel que $x-v$ est dans l'orthogonal de 
 $T_xV$ n'est pas inversible.
-Il est clair que $g$ est lisse, et on applique le théorème de Sard pour conclure (voir [1]
+Il est clair que $g$ est lisse, et on applique le théorème de Sard pour conclure (voir [3]
 pour une preuve).
 
 \begin{thm}[de Sard]
@@ -314,8 +314,8 @@ $a$ et $b$ au sens large.
     $\rho$ sur $\Rme$ peuvent être exprimées comme le produit d'une fraction rationnelle 
     évaluée en $x$ par $e^{1/x}$, et ça suffit pour montrer le caractère lisse en $0$).
     On pose $\rho_0(x)=\rho(1-\tan(x^2))$ pour $x\in(-\sqrt{\pi/2},\sqrt{\pi/2})$ et 
-    $\rho_0(x)=1$ pour $|x|>\sqrt{\pi/2}$, et il est clair qu'au voisinage de $0$ cette 
-    application est nulle et on vérifie facilement qu'elle est également lisse. 
+    $\rho_0(x)=1$ pour $|x|>\sqrt{\pi/2}$. 
+    Il est clair qu'au voisinage de $0$ cette application est nulle, on vérifie facilement qu'elle est également lisse. 
     Pour $x\in\R^2$, on pose $\omega(x)=\rho_0(\norm{x}^2)$.
     Pour tout point critique $c$, on choisit $\varphi_c:U_c\to V_c$ de sorte que $V_c$ 
     contienne une boule $B_c$ centrée en $\varphi(c)$ de rayon $\sqrt[4]{\pi/2}$.
@@ -364,7 +364,7 @@ $a$ et $b$ au sens large.
 \subsubsection{Fonctions de Morse ordonnées}
 
 Avant d'aborder le passage de valeurs critiques, nous allons proposer 
-une manière de modifier des fonctions de Morses afin d'obtenir des
+une manière de modifier des fonctions de Morse afin d'obtenir des
 fonctions plus adaptées aux démonstrations à venir. 
 Plus précisément, on affirme qu'il est possible de modifier les valeurs
 critiques d'une fonction de Morse sans faire bouger les points critiques,
@@ -384,10 +384,10 @@ On commence par le cas des valeurs critiques d'indice $0$ ou $2$.
     Nous allons faire une preuve pour un point critique d'indice $0$ seulement (pour l'autre cas, 
     il suffira de considérer $-f$ par exemple). 
 
-    Soit $a\leq c$. Soit $\varphi:U\to V$ une carte de Morse de $f$ en $x$, en s'assurant que 
-    $V$ soit une boule centrée en $0$. 
-    Prenons $b$ la seule valeur dans $f(\partial U)$ et prenons $\alpha:[c,b]\to\R$ une fonction 
-    lisse, strictement croissante, valant $a$ en $c$ et affine au voisinage de $b$. 
+    Soit $a< c$. Soit $\varphi:U\to V$ une carte de Morse de $f$ en $x$, en s'assurant que 
+    $V$ soit une boule centrée en $0=\varphi(x)$. 
+    On notera $b$ le seul réel dans $f(\varphi^{-1}(\partial V))$, qui vérifie $b\geq c$.
+    Prenons $\alpha:[c,b]\to\R$ une fonction lisse, strictement croissante, valant $a$ en $c$ et affine au voisinage de $b$. 
     On pose alors $g(y)=\alpha(f(y))$ pour $y\in U$, et $g(y)=f(y)$ sinon.
     La fonction $g$ est clairement lisse et $g(x)=\alpha(f(x))=\alpha(c)=a$.
     Ensuite, pour $y\in U$, $\dd g(y)=\alpha'(f(y))\dd f(y)$, et comme $\alpha'>0$, $\dd g(y)=0$ 
