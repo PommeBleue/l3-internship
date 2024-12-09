@@ -227,23 +227,6 @@ On dit que $X$ engendre le groupe à paramètre de difféomorphismes $\varphi$.
     est vérifiée en vertu de l'unicité dans le théorème de Cauchy-Lipschitz.
 \end{proof}
 
-\subsection{Pseudo-gradients}
-
-Cette notion permettra de démontrer des résultats importants de théorie de Morse.
-\begin{defi}
-    Soit $f$ une fonction de Morse sur une variété $M$. 
-    Un champ de vecteurs $X$ sur $M$ est appelé pseudo-gradient adapté à $f$ si 
-    $\dd f(X)$ est strictement positif en dehors des points critiques et nul en 
-    ces derniers, et si de plus, pour tout point critique, il existe une carte 
-    de Morse dans laquelle $X$ devient 
-    $2x_1\partial_{x_1}+\dots+2x_i\partial_{x_i}-2x_{i+1}\partial_{x_{i+1}}-\dots-2x_n\partial{x_n}$.
-\end{defi}
-
-La proposition suivante est démontrée dans [1].
-\begin{prop}
-    Toute fonction de Morse admet un pseudo-gradient adapté.
-\end{prop}
-
 \subsection{Orientations}
 Il s'agit là de généraliser la notion d'orientation qu'on connait bien pour les 
 espaces vectoriels.  
@@ -257,7 +240,8 @@ l'orientation si sa différentielle, un endomorphisme, en tout point préserve l
 Un atlas sera dit orienté si ses changements de carte préservent l'orientation. 
 Deux atlas orientés sont équivalents si leur union est un atlas orienté.
 \begin{defi}
-    Une variété $M$ est dite orientable si elle est munie d'une classe d'équivalence 
+    Une variété $M$ est dite orientable si elle admet un atlas orienté. 
+    Elle est dite orientée si elle est munie d'une classe d'équivalence 
     d'atlas orientés.
 \end{defi}
 
@@ -286,7 +270,7 @@ non orientable.
         Les surfaces obtenues $S_1-B_1$ et $S_2-B_2$ ont des bords, notés respectivement $D_1$ 
         et $D_2$, difféomorphes à la sphère $\mathbb S^1$ ;
         \item On choisit un difféomorphisme $\varphi:D_1\to D_2$ ;
-        \item On quotiente $(S_1-D_1)\cup(S_2-D_2)$ par la relation d'équivalence identifiant 
+        \item On quotiente $(S_1-B_1)\cup(S_2-B_2)$ par la relation d'équivalence identifiant 
         les points de $D_1$ et $D_2$ à travers le difféomorphisme $\varphi$.
     \end{itemize}
 \end{defi}

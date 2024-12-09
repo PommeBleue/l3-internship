@@ -19,19 +19,19 @@ cela revient à écrire
 
 \begin{defi}
     Soit $M$ une variété.
-    Soit $f:M\to R$ une application lisse, $x$ un point critique de $f$ et $\varphi:U\to V$ 
+    Soit $f:M\to \R$ une application lisse, $x$ un point critique de $f$ et $\varphi:U\to V$ 
     une carte de $M$, avec $x\in U$. 
     On définit alors la hessienne de $f$ par rapport à $\varphi$, notée $H_\varphi(f)$, comme 
-    étant la hessienne de l'application $f\circ\varphi$. 
+    étant la hessienne de l'application $f\circ\varphi^{-1}$. 
 \end{defi}
 
 \begin{remark}
     En reprenant les éléments de la définition précédente et en prenant $\psi:U'\to V'$ une 
-    autre carte avec $x\in U'$, non peut montrer que 
+    autre carte avec $x\in U'$, on peut montrer que 
     \[
         H_\varphi(f)={}^tJH_\psi(f)J
     \]
-    où $J$ désigne la jacobienne de $\psi\circ\varphi^{-1}$ en $x$.
+    où $J$ désigne la jacobienne de $\psi\circ\varphi^{-1}$ en $\varphi(x)$.
 \end{remark}
 
 \begin{defi}
@@ -46,7 +46,7 @@ cela revient à écrire
 
 \begin{remark}
     En vertu de la remarque précédente, notre définition est bonne puisque le caractère
-    non dégénéré d'un point critique  ne dépend de la carte dans laquelle on regarde notre
+    non dégénéré d'un point critique  ne dépend pas de la carte dans laquelle on regarde notre
     fonction.
 \end{remark}
 
@@ -114,9 +114,9 @@ cela revient à écrire
         f(x)-f(0)={}^t(M(x)x)Q(0)M(x)x={}^t(A^{-1}M(x)x)JA^{-1}M(x)x
     \]
     on peut finalement poser $h(x)=A^{-1}M(x)x$, application lisse sur le voisinage de $0$ où 
-    elle est définie et donc la différentielle en $0$ est inversible en vertu de l'inversibilité
+    elle est définie. Sa différentielle en $0$ est inversible en vertu de l'inversibilité
     de $M(0)$ et $A$, en appliquant le théorème d'inversion locale, on montre que $h$ est un 
-    difféomorphisme lisse entre deux ouverts contenant $0$ et on pose poser $\varphi(x)=h^{-1}(x)$ 
+    difféomorphisme lisse entre deux ouverts contenant $0$ et on pose $\varphi(x)=h^{-1}(x)$ 
     pour conclure la preuve.
 \end{proof}
 
@@ -130,8 +130,8 @@ cela revient à écrire
 \end{lem}
 
 \begin{proof}
-    Quitte à translater, on peut prendre une carte $\psi:U\to V\subseteq \R^n$ telle que 
-    $0\in V$ et $\psi^{-1}(0)=x$.
+    Quitte à translater, on peut prendre une carte $\psi:U'\to V'\subseteq \R^n$ telle que 
+    $0\in V'$ et $\psi^{-1}(0)=x$.
     Dans ce cas, $f\circ\psi^{-1}$ vérifie les hypothèses du lemme de Morse à $n$ variables 
     (avec $0$ qui est bien un point critique non dégénéré d'indice $\lambda$). 
     On applique donc ce lemme.
@@ -166,12 +166,27 @@ cela revient à écrire
     contredit le lemme précédent.
 \end{proof}
 
+Cette notion permettra de démontrer des résultats importants de théorie de Morse.
+\begin{defi}
+    Soit $f$ une fonction de Morse sur une variété $M$. 
+    Un champ de vecteurs $X$ sur $M$ est appelé pseudo-gradient adapté à $f$ si 
+    $\dd f(X)$ est strictement positif en dehors des points critiques et nul en 
+    ces derniers, et si de plus, pour tout point critique, il existe une carte 
+    de Morse dans laquelle $X$ devient 
+    $2x_1\partial_{x_1}+\dots+2x_i\partial_{x_i}-2x_{i+1}\partial_{x_{i+1}}-\dots-2x_n\partial_{x_n}$.
+\end{defi}
+
+La proposition suivante est démontrée dans [1].
+\begin{prop}
+    Toute fonction de Morse admet un pseudo-gradient adapté.
+\end{prop}
+
 \subsubsection{Existence de fonctions de Morse sur une variété compacte}
 On va commencer par montrer que toute variété compacte se plonge dans un espace affine $R^N$. 
 En fait, on n'a pas besoin que la variété soit compacte, mais ça suffit pour ce qu'on veut faire, 
 c'est-à-dire classifier les surfaces compactes, connexes, orientables et sans bord.
 
-Pour ce faire, on admet le théorème suivant 
+Pour ce faire, on admet le théorème suivant (voir [3])
 \begin{thm}
     Pour tout recouvrement d'une variété $M$ par des ouverts $U_i$, il existe une famille 
     de fonctions lisses $\rho_i:M\to \R_+$ telles que 
@@ -188,7 +203,7 @@ Pour ce faire, on admet le théorème suivant
 \end{thm}
 
 \begin{proof}
-    Soit $M$ une variété compacte de dimension $n$ et $\lbrace\varphi_i:U_i\to V_i\rbrace$. 
+    Soit $M$ une variété compacte de dimension $n$ et $\lbrace\varphi_i:U_i\to V_i\rbrace$ un atlas de $M$. 
     Comme $M$ est compacte et que $(U_i)$ recouvre $M$, on peut extraire une famille finie 
     d'ouverts $(U_{i_k})$ recouvrant $M$. 
     Supposons que ces ouverts soient au nombre de $p$.
@@ -262,7 +277,8 @@ On pose alors $g:N\to\R^n$ définie par $g(x,v)=x+v$.
 On vérifie qu'un point $p\in\R^n$ est une valeur critique de $g$ si et seulement si 
 la matrice de la hessienne de $f_p$ en un $x$ tel que $x-v$ est dans l'orthogonal de 
 $T_xV$ n'est pas inversible.
-Il est clair que $g$ est lisse, et on applique le théorème de Sard pour conclure.
+Il est clair que $g$ est lisse, et on applique le théorème de Sard pour conclure (voir [1]
+pour une preuve).
 
 \begin{thm}[de Sard]
     Soit $f:M\to N$ une application, où $M$ et $N$ sont des sous-variétés de 
@@ -347,13 +363,13 @@ $a$ et $b$ au sens large.
 
 \subsubsection{Fonctions de Morse ordonnées}
 
-Avant d'attaquer le passage de points critiques, nous allons proposer des modifications de 
-fonctions de Morse pour obtenir des choses avec lesquelles il est plus agréable de travailler. 
-Par "modification" de fonction de Morse, on veut dire, plus précisément, que, en partant 
-d'une certaine fonction de Morse, on proposera une nouvelle fonction coïncidant avec $f$ 
-en dehors d'un voisinage d'un point critique.
+Avant d'aborder le passage de valeurs critiques, nous allons proposer 
+une manière de modifier des fonctions de Morses afin d'obtenir des
+fonctions plus adaptées aux démonstrations à venir. 
+Plus précisément, on affirme qu'il est possible de modifier les valeurs
+critiques d'une fonction de Morse sans faire bouger les points critiques,
+en modifiant la fonction de Morse sur le voisinage d'un point critique.
 
-Commençons par montrer que l'on peut modifier les valeurs des valeurs critiques. 
 On commence par le cas des valeurs critiques d'indice $0$ ou $2$. 
 
 \begin{lem}
